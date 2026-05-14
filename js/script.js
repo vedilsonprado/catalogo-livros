@@ -76,7 +76,7 @@ function renderizarCatalogo(listaDeLivros) {
         const cor = coresFundo[indexReal % coresFundo.length];
 
         const card = `
-            <article class="book-card">
+            <article class="book-card ${livro.vendido ? 'sold' : ''}">
                 <div class="book-cover-wrapper" style="background-color: ${cor};">
                     <img src="${livro.imagem}" alt="Capa: ${livro.titulo}" class="book-cover-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/150x220?text=Sem+Capa';">
                 </div>
@@ -85,9 +85,15 @@ function renderizarCatalogo(listaDeLivros) {
                     <p class="author">${livro.autor}</p>
                     <div class="book-footer">
                         <p class="price">R$ ${livro.preco.toFixed(2).replace('.', ',')}</p>
-                        <button class="add-btn" onclick="adicionarAoCarrinho(${indexReal})">
-                            <i class="fas fa-plus"></i>
-                        </button>
+                        ${
+    livro.vendido
+    ? `<button class="add-btn">X</button>`
+    : `
+    <button class="add-btn" onclick="adicionarAoCarrinho(${indexReal})">
+        <i class="fas fa-plus"></i>
+    </button>
+    `
+}
                     </div>
                 </div>
             </article>
