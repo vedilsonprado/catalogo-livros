@@ -357,3 +357,42 @@ main {
         height: 180px;
     }
 }
+
+.book-card.sold {
+    position: relative;
+    opacity: 0.9;
+}
+
+.book-card.sold .book-cover-img {
+    filter: grayscale(100%) sepia(30%) brightness(0.7);
+}
+
+/* Faixa "VENDIDO" */
+.book-card.sold::after {
+    content: "VENDIDO";
+    position: absolute;
+    top: 20px;
+    left: -35px;
+
+    background-color: rgba(120, 0, 0, 0.9);
+    color: white;
+
+    padding: 10px 40px;
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    transform: rotate(-35deg);
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+
+    z-index: 10;
+}
+
+/* Desabilita botão */
+.book-card.sold .add-btn {
+    background-color: #999;
+    cursor: not-allowed;
+    pointer-events: none;
+}
