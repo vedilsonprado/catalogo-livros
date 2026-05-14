@@ -1,9 +1,9 @@
 // 1. BANCO DE DADOS DOS LIVROS (Lista Completa)
 // O campo "imagem" indica o nome exato que o arquivo deve ter dentro da pasta "img"
 const livrosCatalogados = [
-    { titulo: 'A Candeia Debaixo do Alqueire', autor: 'Pe. Álvaro Calderón', preco: 60.00, imagem: 'img/a-candeia-debaixo-do-alqueire.jpg' },
-    { titulo: 'A Igreja, a Reforma e a Civilização', autor: 'Padre Leonel Franca', preco: 50.00, imagem: 'img/a-igreja-a-reforma-e-a-civilizacao.jpg' },
-    { titulo: 'A Missa de Sempre', autor: 'Dom Marcel Lefebvre', preco: 40.00, imagem: 'img/a-missa-de-sempre.jpg' },
+    { titulo: 'A Candeia Debaixo do Alqueire', autor: 'Pe. Álvaro Calderón', preco: 60.00, imagem: 'img/a-candeia-debaixo-do-alqueire.jpg', vendido: true },
+    { titulo: 'A Igreja, a Reforma e a Civilização', autor: 'Padre Leonel Franca', preco: 50.00, imagem: 'img/a-igreja-a-reforma-e-a-civilizacao.jpg', vendido: true },
+    { titulo: 'A Missa de Sempre', autor: 'Dom Marcel Lefebvre', preco: 40.00, imagem: 'img/a-missa-de-sempre.jpg', vendido: true },
     { titulo: 'A República Maçônica', autor: 'Editora Santa Cruz', preco: 30.00, imagem: 'img/a-republica-maconica.jpg' },
     { titulo: 'A Revolução Francesa', autor: 'Pierre Gaxotte', preco: 60.00, imagem: 'img/a-revolucao-francesa.jpg' },
     { titulo: 'Anchieta: O Santo do Brasil', autor: 'Charles Sainte-Foy', preco: 30.00, imagem: 'img/anchieta-o-santo-do-brasil.jpg' },
